@@ -1,0 +1,28 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+./configure[507]: gcc:  not found
+./configure[687]: gcc:  not found
+./configure[701]: gcc:  not found
+"configure", line 770.10: 1506-296 (S) #include file <minix/config.h> not found.
+./configure[836]: gcc:  not found
+./configure[836]: gcc:  not found
+./configure[836]: gcc:  not found
+./configure[836]: gcc:  not found
+./configure[836]: gcc:  not found
+./configure[922]: gcc:  not found
+"configure", line 951.10: 1506-296 (S) #include file <siginfo.h> not found.
+./configure[990]: gcc:  not found
+./configure[1115]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1190]: gcc:  not found
+./configure[1227]: gcc:  not found
+./configure[1274]: gcc:  not found
+./configure[1535]: gcc:  not found
+./configure[1581]: gcc:  not found
+./configure[1630]: gcc:  not found

@@ -1,0 +1,6 @@
+#! /bin/sh
+# Running `$0' as if it were installed.
+
+me=`echo "$0" | sed -e 's,.*[\\/],,'`
+
+exec /opt/freeware/src/packages/BUILD/autoconf-2.53/bin/$me --include /opt/freeware/src/packages/BUILD/autoconf-2.53/lib ${1+"$@"}

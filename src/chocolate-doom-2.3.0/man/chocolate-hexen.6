@@ -1,0 +1,321 @@
+.TH chocolate\-hexen 6
+.SH NAME
+chocolate\-hexen \- historically compatible Hexen engine
+.SH SYNOPSIS
+.B chocolate\-hexen
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.PP
+Chocolate Hexen is a port of Raven Software's 1995 game "Hexen" that
+aims to behave as similar to the original DOS version of Hexen as
+possible.
+.br
+.SH GENERAL OPTIONS
+.TP
+\fB\-artiskip\fR
+Don't allow artifacts to be used when the run key is held down. 
+.TP
+\fB\-cdrom\fR
+[windows only] Save configuration data and savegames in c:\\hexndata, allowing play from CD. 
+.TP
+\fB\-config <file>\fR
+Load main configuration from the specified file, instead of the default. 
+.TP
+\fB\-dumpsubstconfig <filename>\fR
+Read all MIDI files from loaded WAD files, dump an example substitution music config file to the specified filename and quit. 
+.TP
+\fB\-extraconfig <file>\fR
+Load additional configuration from the specified file, instead of the default. 
+.TP
+\fB\-file <files>\fR
+Load the specified PWAD files. 
+.TP
+\fB\-iwad <file>\fR
+Specify an IWAD file to use. 
+.TP
+\fB\-loadgame <s>\fR
+Load the game in savegame slot s. 
+.TP
+\fB\-mb <mb>\fR
+Specify the heap size, in MiB (default 16). 
+.TP
+\fB\-mmap\fR
+Use the OS's virtual memory subsystem to map WAD files directly into memory. 
+.TP
+\fB\-nomonsters\fR
+Disable monsters. 
+.TP
+\fB\-nomusic\fR
+Disable music. 
+.TP
+\fB\-nosfx\fR
+Disable sound effects. 
+.TP
+\fB\-nosound\fR
+Disable all sound output. 
+.TP
+\fB\-ravpic\fR
+Take screenshots when F1 is pressed. 
+.TP
+\fB\-respawn\fR
+Monsters respawn after being killed. 
+.TP
+\fB\-scripts <path>\fR
+Development option to specify path to level scripts. 
+.TP
+\fB\-skill <skill>\fR
+Set the game skill, 1\-5 (1: easiest, 5: hardest).  A skill of 0 disables all monsters. 
+
+.SH COMPATIBILITY
+.TP
+\fB\-setmem <version>\fR
+Specify DOS version to emulate for NULL pointer dereference emulation.  Supported versions are: dos622, dos71, dosbox. The default is to emulate DOS 7.1 (Windows 98). 
+.TP
+\fB\-v10override\fR
+If provided, the check for the v1.0 IWAD file is disabled, even though it will almost certainly cause the game to crash. 
+
+.SH DEMO OPTIONS
+.TP
+\fB\-demoextend\fR
+Record or playback a demo without automatically quitting after either level exit or player respawn. 
+.TP
+\fB\-longtics\fR
+Record or playback a demo with high resolution turning. 
+.TP
+\fB\-maxdemo <size>\fR
+Specify the demo buffer size (KiB) 
+.TP
+\fB\-playdemo <demo>\fR
+Play back the demo named demo.lmp. 
+.TP
+\fB\-shortticfix\fR
+Smooth out low resolution turning when recording a demo. 
+.TP
+\fB\-strictdemos\fR
+When recording or playing back demos, disable any extensions of the vanilla demo format \- record demos as vanilla would do, and play back demos as vanilla would do. 
+.TP
+\fB\-timedemo <demo>\fR
+Play back the demo named demo.lmp, determining the framerate of the screen. 
+
+.SH DISPLAY OPTIONS
+.TP
+\fB\-1\fR
+Don't scale up the screen. 
+.TP
+\fB\-2\fR
+Double up the screen to 2x its normal size. 
+.TP
+\fB\-3\fR
+Double up the screen to 3x its normal size. 
+.TP
+\fB\-8in32\fR
+Set the color depth of the screen to 32 bits per pixel. 
+.TP
+\fB\-bpp <bpp>\fR
+Specify the color depth of the screen, in bits per pixel. 
+.TP
+\fB\-fullscreen\fR
+Run in fullscreen mode. 
+.TP
+\fB\-geometry <WxY>[wf]\fR
+Specify the dimensions of the window or fullscreen mode.  An optional letter of w or f appended to the dimensions selects windowed or fullscreen mode. 
+.TP
+\fB\-grabmouse\fR
+Grab the mouse when running in windowed mode. 
+.TP
+\fB\-height <y>\fR
+Specify the screen height, in pixels. 
+.TP
+\fB\-noblit\fR
+Disable blitting the screen. 
+.TP
+\fB\-nograbmouse\fR
+Don't grab the mouse when running in windowed mode. 
+.TP
+\fB\-nomouse\fR
+Disable the mouse. 
+.TP
+\fB\-nonovert\fR
+Enable vertical mouse movement. 
+.TP
+\fB\-novert\fR
+Disable vertical mouse movement. 
+.TP
+\fB\-width <x>\fR
+Specify the screen width, in pixels. 
+.TP
+\fB\-window\fR
+Run in a window. 
+
+.SH NETWORKING OPTIONS
+.TP
+\fB\-autojoin\fR
+Automatically search the local LAN for a multiplayer server and join it. 
+.TP
+\fB\-class <n>\fR
+Specify player class: 0=fighter, 1=cleric, 2=mage, 3=pig. 
+.TP
+\fB\-connect <address>\fR
+Connect to a multiplayer server running on the given address. 
+.TP
+\fB\-deathmatch\fR
+Start a deathmatch game. 
+.TP
+\fB\-dup <n>\fR
+Reduce the resolution of the game by a factor of n, reducing the amount of network bandwidth needed. 
+.TP
+\fB\-extratics <n>\fR
+Send n extra tics in every packet as insurance against dropped packets. 
+.TP
+\fB\-ignoreversion\fR
+When running a netgame server, ignore version mismatches between the server and the client. Using this option may cause game desyncs to occur, or differences in protocol may mean the netgame will simply not function at all. 
+.TP
+\fB\-newsync\fR
+Use new network client sync code rather than the classic sync code. This is currently disabled by default because it has some bugs. 
+.TP
+\fB\-nodes <n>\fR
+Autostart the netgame when n nodes (clients) have joined the server. 
+.TP
+\fB\-port <n>\fR
+Use the specified UDP port for communications, instead of the default (2342). 
+.TP
+\fB\-privateserver\fR
+When running a server, don't register with the global master server. Implies \-server. 
+.TP
+\fB\-randclass\fR
+In deathmatch mode, change a player's class each time the player respawns. 
+.TP
+\fB\-server\fR
+Start a multiplayer server, listening for connections. 
+.TP
+\fB\-servername <name>\fR
+When starting a network server, specify a name for the server. 
+.TP
+\fB\-solo\-net\fR
+Start the game playing as though in a netgame with a single player.  This can also be used to play back single player netgame demos. 
+.TP
+\fB\-timer <n>\fR
+For multiplayer games: exit each level after n minutes. 
+
+.SH DEHACKED AND WAD MERGING
+.TP
+\fB\-aa <files>\fR
+Equivalent to "\-af <files> \-as <files>". 
+.TP
+\fB\-af <files>\fR
+Simulates the behavior of NWT's \-af option, merging flats into the main IWAD directory.  Multiple files may be specified. 
+.TP
+\fB\-as <files>\fR
+Simulates the behavior of NWT's \-as option, merging sprites into the main IWAD directory.  Multiple files may be specified. 
+.TP
+\fB\-deh <files>\fR
+Load the given dehacked patch(es) 
+.TP
+\fB\-merge <files>\fR
+Simulates the behavior of deutex's \-merge option, merging a PWAD into the main IWAD.  Multiple files may be specified. 
+.TP
+\fB\-nocheats\fR
+Ignore cheats in dehacked files. 
+.TP
+\fB\-nwtmerge <files>\fR
+Simulates the behavior of NWT's \-merge option.  Multiple files may be specified.
+.SH IWAD SEARCH PATHS
+To play, an IWAD file is needed. This is a large file containing all of the
+levels, graphics, sound effects, music and other material that make up the
+game. IWAD files are named according to the game; the standard names are:
+.TP
+\fBdoom.wad, doom1.wad, doom2.wad, tnt.wad, plutonia.wad\fR
+Doom, Doom II, Final Doom
+.TP
+\fBheretic.wad, heretic1.wad, hexen.wad, strife1.wad\fR
+Heretic, Hexen and Strife (commercial Doom engine games).
+.TP
+\fBhacx.wad, chex.wad\fR
+Hacx and Chex Quest - more obscure games based on the Doom engine.
+.TP
+\fBfreedm.wad, freedoom1.wad, freedoom2.wad\fR
+The Freedoom open content IWAD files.
+.LP
+The following directory paths are searched in order to find an IWAD:
+.TP
+\fBCurrent working directory\fR
+Any IWAD files found in the current working directory will be used in
+preference to IWADs found in any other directories.
+.TP
+\fBDOOMWADDIR\fR
+This environment variable can be set to contain a path to a single directory
+in which to look for IWAD files. This environment variable is supported by
+most Doom source ports.
+.TP
+\fBDOOMWADPATH\fR
+This environment variable, if set, can contain a colon-separated list of
+directories in which to look for IWAD files, or alternatively full paths to
+specific IWAD files.
+.TP
+\fB$HOME/.local/share/games/doom\fR
+Writeable directory in the user's home directory. The path can be overridden
+using the \fBXDG_DATA_HOME\fR environment variable (see the XDG Base Directory
+Specification).
+.TP
+\fB/usr/local/share/games/doom, /usr/share/games/doom\fR
+System-wide locations that can be accessed by all users. The path
+\fB/usr/share/games/doom\fR is a standard path that is supported by most
+Doom source ports. These paths can be overridden using the \fBXDG_DATA_DIRS\fR
+environment variable (see the XDG Base Directory Specification).
+.LP
+The above can be overridden on a one-time basis by using the \fB\-iwad\fR
+command line parameter to provide the path to an IWAD file to use. This
+parameter can also be used to specify the name of a particular IWAD to use
+from one of the above paths. For example, '\fB-iwad doom.wad\fR' will search
+the above paths for the file \fBdoom.wad\fR to use.
+.SH ENVIRONMENT
+This section describes environment variables that control Chocolate Hexen's
+behavior.
+.TP
+\fBDOOMWADDIR\fR, \fBDOOMWADPATH\fR
+See the section, \fBIWAD SEARCH PATHS\fR above.
+.TP
+\fBPCSOUND_DRIVER\fR
+When running in PC speaker sound effect mode, this environment variable
+specifies a PC speaker driver to use for sound effect playback.  Valid
+options are "Linux" for the Linux console mode driver, "BSD" for the
+NetBSD/OpenBSD PC speaker driver, and "SDL" for SDL-based emulated PC speaker
+playback (using the digital output).
+.TP
+\fBOPL_DRIVER\fR
+When using OPL MIDI playback, this environment variable specifies an
+OPL backend driver to use.  Valid options are "SDL" for an SDL-based
+software emulated OPL chip, "Linux" for the Linux hardware OPL driver,
+and "OpenBSD" for the OpenBSD/NetBSD hardware OPL driver.
+
+Generally speaking, a real hardware OPL chip sounds better than software
+emulation; however, modern machines do not often include one. If
+present, it may still require extra work to set up and elevated
+security privileges to access.
+
+.SH FILES
+.TP
+\fB$HOME/.chocolate-doom/hexen.cfg\fR
+The main configuration file for Chocolate Hexen.  See \fBhexen.cfg\fR(5).
+.TP
+\fB$HOME/.chocolate-doom/chocolate-hexen.cfg\fR
+Extra configuration values that are specific to Chocolate Hexen and not
+present in Vanilla Hexen.  See \fBchocolate-hexen.cfg\fR(5).
+.SH SEE ALSO
+\fBchocolate-doom\fR(6),
+\fBchocolate-heretic\fR(6),
+\fBchocolate-server\fR(6),
+\fBchocolate-setup\fR(6)
+.SH AUTHOR
+Chocolate Hexen is part of the Chocolate Doom project, written and
+maintained by Simon Howard. It is based on the Hexen source code,
+released by Raven Software.
+.SH COPYRIGHT
+Copyright \(co id Software Inc.
+Copyright \(co Raven Software Inc.
+Copyright \(co 2005-2013 Simon Howard.
+.br
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+

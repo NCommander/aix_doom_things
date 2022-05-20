@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Chocolate Setup
+Exec=chocolate-setup
+Icon=chocolate-setup
+Type=Application
+Comment=Setup tool for Chocolate
+Categories=Settings;
+Keywords=first;person;shooter;doom;heretic;hexen;strife;vanilla;

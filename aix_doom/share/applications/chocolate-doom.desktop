@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Chocolate Doom
+Exec=chocolate-doom
+Icon=chocolate-doom
+Type=Application
+Comment=Conservative source port
+Categories=Game;ActionGame;
+Keywords=first;person;shooter;vanilla;

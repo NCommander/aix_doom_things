@@ -1,0 +1,7 @@
+# -*- shell-script -*-
+# tests/atlocal.  Generated from atlocal.in by configure.
+# Configurable variable values for Autoconf test suite.
+# Copyright 2000, 2001 Free Software Foundation, Inc.
+
+# We need Perl.
+PERL='/usr/bin/perl'
